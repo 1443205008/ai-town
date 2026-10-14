@@ -1,0 +1,196 @@
+{
+  "id": "resident-012",
+  "name": "莉亚",
+  "role": "旅舍经营者",
+  "background": "莉亚是移民团中的旅舍经营者。家里的旅舍接待过各地迁徙者，后来一场火灾迫使她离开旧城。她懂得短暂的欢迎能给人重新开始的勇气，也担心没有床位的热情最终变成失望。初到晨沙镇时，莉亚首先注意到水井、帐篷和仓库之间尚未建立稳定的生活秩序。沙海的环境让过去的经验既有价值又充满不确定性。眼下最想接待往来移民，但不能为了这件事牺牲基本的公平和个人尊严。与镇长合作的前提是愿意听取居民的实际困难，并让投入的劳动得到可验证的回应。",
+  "traits": {
+    "openness": 52,
+    "conscientiousness": 66,
+    "extraversion": 38,
+    "agreeableness": 42,
+    "stability": 44
+  },
+  "tendencies": [
+    "友善机敏",
+    "根据亲身经历评估承诺",
+    "拒绝不安全或无报酬的任务"
+  ],
+  "values": [
+    "生存",
+    "公平",
+    "接待往来移民"
+  ],
+  "skills": {
+    "旅舍经营者": 80,
+    "建设": 25,
+    "农务": 20,
+    "医疗": 10
+  },
+  "preferredJob": "旅舍经营者",
+  "wagePreference": 15,
+  "secret": "莉亚曾经隐瞒过一次对家人的承诺，尚未告诉任何居民。",
+  "cash": 320,
+  "items": [
+    "水袋"
+  ],
+  "debts": [],
+  "homeId": "building-7",
+  "goals": [
+    {
+      "id": "goal-11-short",
+      "term": "SHORT",
+      "content": "安顿并完成今日职业工作",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "goal-11-mid",
+      "term": "MID",
+      "content": "寻找可信赖的合作伙伴",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "goal-11-long",
+      "term": "LONG",
+      "content": "接待往来移民",
+      "status": "ACTIVE"
+    }
+  ],
+  "relations": {
+    "resident-001": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-002": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-003": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-004": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-005": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-006": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-007": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-008": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-009": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-010": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-011": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-013": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-014": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-015": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-016": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-017": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-018": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-019": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-020": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    }
+  },
+  "modelPolicy": "RULES_ONLY",
+  "knowledge": [],
+  "memories": []
+}

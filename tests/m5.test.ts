@@ -1,0 +1,8 @@
+import {it,expect} from 'vitest';
+import {createWorld} from '../packages/world-core/src/world';
+import {parseProposal,submitProposal,deliberate} from '../packages/governance/src/governance';
+import {startProject,constructionTick,projectControl,validateSite} from '../packages/city-planning/src/construction';
+import {audit,available} from '../packages/economy/src/economy';
+function setup(){const w=createWorld();const p=submitProposal(w,{...parseProposal('水塔预算4000'),site:{x:40,y:32}},'tower');deliberate(w,p);return {w,p};}
+it('完整水塔施工：预留不产出、自愿工人、实际成本与竣工记忆',()=>{const {w,p}=setup(),cap=w.settings.waterCapacity;const j=startProject(w,p);expect(w.settings.waterCapacity).toBe(cap);expect(available(w)).toBe(1600);for(let i=0;i<1500&&j.status!=='COMPLETED';i++){w.gameTime+=.8;constructionTick(w,.8);w.version++;w.events=w.events.slice(-300);}expect(j.status).toBe('COMPLETED');expect(w.settings.waterCapacity).toBe(cap+200);expect(w.resources.cash).toBeCloseTo(1600);expect(w.resources.stone).toBeCloseTo(60);expect(w.residents.some(r=>r.memories.some((m:any)=>m.content.includes('竣工')))).toBe(true);expect(audit(w).balanced).toBe(true);});
+it('停工取消只退款未耗预留，冲突与非法授权拒绝',()=>{const {w,p}=setup(),j=startProject(w,p);for(let i=0;i<100;i++){constructionTick(w,1);w.version++;}const paid=j.cashSpent;projectControl(w,j,'pause');projectControl(w,j,'resume');projectControl(w,j,'cancel');expect(w.resources.cash).toBeCloseTo(5000-paid);expect(available(w)).toBeCloseTo(w.resources.cash);expect(()=>validateSite(w,'HOUSING',{x:30,y:21})).toThrow();expect(()=>startProject(w,{...p,status:'DRAFT'})).toThrow();});

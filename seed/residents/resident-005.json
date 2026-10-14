@@ -1,0 +1,196 @@
+{
+  "id": "resident-005",
+  "name": "尤里",
+  "role": "建筑工头",
+  "background": "尤里是移民团中的建筑工头。带领工人修过城墙，因赶工事故失去一位朋友。来到沙海前把积蓄分给了对方家人，他对华丽蓝图并不反感，但始终要求工钱、工具和休息有保障。初到晨沙镇时，尤里首先注意到水井、帐篷和仓库之间尚未建立稳定的生活秩序。沙海的环境让过去的经验既有价值又充满不确定性。眼下最想修成石制街区，但不能为了这件事牺牲基本的公平和个人尊严。与镇长合作的前提是愿意听取居民的实际困难，并让投入的劳动得到可验证的回应。",
+  "traits": {
+    "openness": 63,
+    "conscientiousness": 89,
+    "extraversion": 77,
+    "agreeableness": 43,
+    "stability": 41
+  },
+  "tendencies": [
+    "现实急躁",
+    "根据亲身经历评估承诺",
+    "拒绝不安全或无报酬的任务"
+  ],
+  "values": [
+    "生存",
+    "公平",
+    "修成石制街区"
+  ],
+  "skills": {
+    "建筑工头": 80,
+    "建设": 70,
+    "农务": 20,
+    "医疗": 10
+  },
+  "preferredJob": "建筑工头",
+  "wagePreference": 12,
+  "secret": "尤里曾经隐瞒过一次对家人的承诺，尚未告诉任何居民。",
+  "cash": 180,
+  "items": [
+    "水袋"
+  ],
+  "debts": [],
+  "homeId": "building-6",
+  "goals": [
+    {
+      "id": "goal-4-short",
+      "term": "SHORT",
+      "content": "安顿并完成今日职业工作",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "goal-4-mid",
+      "term": "MID",
+      "content": "寻找可信赖的合作伙伴",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "goal-4-long",
+      "term": "LONG",
+      "content": "修成石制街区",
+      "status": "ACTIVE"
+    }
+  ],
+  "relations": {
+    "resident-001": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-002": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-003": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-004": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-006": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-007": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-008": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-009": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-010": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-011": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-012": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-013": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-014": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-015": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-016": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-017": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-018": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-019": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-020": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    }
+  },
+  "modelPolicy": "RULES_ONLY",
+  "knowledge": [],
+  "memories": []
+}

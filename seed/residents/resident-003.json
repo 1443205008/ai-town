@@ -1,0 +1,196 @@
+{
+  "id": "resident-003",
+  "name": "萨娜",
+  "role": "医生",
+  "background": "萨娜是移民团中的医生。在干旱期间守过临时病房，见过省下几桶清水却失去病人的结果。曾与管理者公开争吵，离开熟悉的医院后仍保留为每个人建立健康记录的习惯。初到晨沙镇时，萨娜首先注意到水井、帐篷和仓库之间尚未建立稳定的生活秩序。沙海的环境让过去的经验既有价值又充满不确定性。眼下最想建立医院，但不能为了这件事牺牲基本的公平和个人尊严。与镇长合作的前提是愿意听取居民的实际困难，并让投入的劳动得到可验证的回应。",
+  "traits": {
+    "openness": 49,
+    "conscientiousness": 67,
+    "extraversion": 51,
+    "agreeableness": 69,
+    "stability": 68
+  },
+  "tendencies": [
+    "善良强硬",
+    "根据亲身经历评估承诺",
+    "拒绝不安全或无报酬的任务"
+  ],
+  "values": [
+    "生存",
+    "公平",
+    "建立医院"
+  ],
+  "skills": {
+    "医生": 80,
+    "建设": 25,
+    "农务": 20,
+    "医疗": 90
+  },
+  "preferredJob": "医生",
+  "wagePreference": 14,
+  "secret": "萨娜曾经隐瞒过一次对家人的承诺，尚未告诉任何居民。",
+  "cash": 140,
+  "items": [
+    "水袋"
+  ],
+  "debts": [],
+  "homeId": "building-6",
+  "goals": [
+    {
+      "id": "goal-2-short",
+      "term": "SHORT",
+      "content": "安顿并完成今日职业工作",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "goal-2-mid",
+      "term": "MID",
+      "content": "寻找可信赖的合作伙伴",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "goal-2-long",
+      "term": "LONG",
+      "content": "建立医院",
+      "status": "ACTIVE"
+    }
+  ],
+  "relations": {
+    "resident-001": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-002": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-004": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-005": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-006": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-007": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-008": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-009": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-010": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-011": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-012": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-013": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-014": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-015": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-016": {
+      "familiarity": 20,
+      "trust": 75,
+      "affection": 70,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-017": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-018": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-019": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-020": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    }
+  },
+  "modelPolicy": "RULES_ONLY",
+  "knowledge": [],
+  "memories": []
+}

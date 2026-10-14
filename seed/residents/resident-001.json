@@ -1,0 +1,196 @@
+{
+  "id": "resident-001",
+  "name": "艾拉",
+  "role": "水务工程师",
+  "background": "艾拉是移民团中的水务工程师。曾在旧大陆修复一条被商会放弃的输水渠，却因拒绝篡改损耗报告失去职位。母亲在旱灾时病倒，让她相信透明测量比漂亮承诺更能救人。初到晨沙镇时，艾拉首先注意到水井、帐篷和仓库之间尚未建立稳定的生活秩序。沙海的环境让过去的经验既有价值又充满不确定性。眼下最想修复古水脉，但不能为了这件事牺牲基本的公平和个人尊严。与镇长合作的前提是愿意听取居民的实际困难，并让投入的劳动得到可验证的回应。",
+  "traits": {
+    "openness": 35,
+    "conscientiousness": 45,
+    "extraversion": 25,
+    "agreeableness": 35,
+    "stability": 30
+  },
+  "tendencies": [
+    "理性固执",
+    "根据亲身经历评估承诺",
+    "拒绝不安全或无报酬的任务"
+  ],
+  "values": [
+    "生存",
+    "公平",
+    "修复古水脉"
+  ],
+  "skills": {
+    "水务工程师": 80,
+    "建设": 70,
+    "农务": 20,
+    "医疗": 10
+  },
+  "preferredJob": "水务工程师",
+  "wagePreference": 12,
+  "secret": "艾拉曾经隐瞒过一次对家人的承诺，尚未告诉任何居民。",
+  "cash": 100,
+  "items": [
+    "水袋"
+  ],
+  "debts": [],
+  "homeId": "building-6",
+  "goals": [
+    {
+      "id": "goal-0-short",
+      "term": "SHORT",
+      "content": "安顿并完成今日职业工作",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "goal-0-mid",
+      "term": "MID",
+      "content": "寻找可信赖的合作伙伴",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "goal-0-long",
+      "term": "LONG",
+      "content": "修复古水脉",
+      "status": "ACTIVE"
+    }
+  ],
+  "relations": {
+    "resident-002": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-003": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-004": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-005": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-006": {
+      "familiarity": 20,
+      "trust": 75,
+      "affection": 70,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-007": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-008": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-009": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-010": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-011": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-012": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-013": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-014": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-015": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-016": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-017": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-018": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-019": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-020": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    }
+  },
+  "modelPolicy": "RULES_ONLY",
+  "knowledge": [],
+  "memories": []
+}

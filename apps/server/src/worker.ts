@@ -1,0 +1,10 @@
+import { migrate,ensureStarter,listWorlds,tick,pool } from '../../../packages/db/src/store';
+import {simulate} from '../../../packages/world-core/src/simulate';
+import {modelMigrate,providers} from '../../../packages/model-center/src/storage';
+import {getWorld} from '../../../packages/db/src/store';
+import {runJob} from '../../../packages/agent-runtime/src/jobs';
+await migrate();await ensureStarter();
+await modelMigrate();
+let aiBusy=false;const aiTimer=setInterval(async()=>{if(aiBusy)return;aiBusy=true;try{for(const summary of await listWorlds()){const w=await getWorld(summary.id),job=w.aiJobs?.find((j:any)=>['PENDING','RETRY'].includes(j.status)&&(j.nextAttemptAt??0)<=Date.now());if(job&&w.settings.aiEnabled)await runJob(w,job,await providers(true));}}catch(e){console.error('模型队列暂不可用');}finally{aiBusy=false;}},2000);
+let busy=false;const timer=setInterval(async()=>{if(busy)return;busy=true;try{for(const w of await listWorlds())await tick(w.id,Date.now(),simulate);}catch(e){console.error('Tick 失败，事务已回滚',e);}finally{busy=false;}},250);
+for(const signal of ['SIGTERM','SIGINT'])process.on(signal,async()=>{clearInterval(timer);clearInterval(aiTimer);await pool.end();process.exit(0);});

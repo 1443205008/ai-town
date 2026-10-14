@@ -1,0 +1,196 @@
+{
+  "id": "resident-008",
+  "name": "莫娜",
+  "role": "镇务文书",
+  "background": "莫娜是移民团中的镇务文书。曾给旧大陆的小镇抄写会议纪要，见过一段含糊文字如何让弱势居民失去补偿。她相信不同的人有权说清自己的处境，耐心听完争论再记录真正的共识。初到晨沙镇时，莫娜首先注意到水井、帐篷和仓库之间尚未建立稳定的生活秩序。沙海的环境让过去的经验既有价值又充满不确定性。眼下最想规范自治，但不能为了这件事牺牲基本的公平和个人尊严。与镇长合作的前提是愿意听取居民的实际困难，并让投入的劳动得到可验证的回应。",
+  "traits": {
+    "openness": 84,
+    "conscientiousness": 72,
+    "extraversion": 51,
+    "agreeableness": 94,
+    "stability": 33
+  },
+  "tendencies": [
+    "公正善于倾听",
+    "根据亲身经历评估承诺",
+    "拒绝不安全或无报酬的任务"
+  ],
+  "values": [
+    "生存",
+    "公平",
+    "规范自治"
+  ],
+  "skills": {
+    "镇务文书": 80,
+    "建设": 25,
+    "农务": 20,
+    "医疗": 10
+  },
+  "preferredJob": "镇务文书",
+  "wagePreference": 15,
+  "secret": "莫娜曾经隐瞒过一次对家人的承诺，尚未告诉任何居民。",
+  "cash": 240,
+  "items": [
+    "水袋"
+  ],
+  "debts": [],
+  "homeId": "building-6",
+  "goals": [
+    {
+      "id": "goal-7-short",
+      "term": "SHORT",
+      "content": "安顿并完成今日职业工作",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "goal-7-mid",
+      "term": "MID",
+      "content": "寻找可信赖的合作伙伴",
+      "status": "ACTIVE"
+    },
+    {
+      "id": "goal-7-long",
+      "term": "LONG",
+      "content": "规范自治",
+      "status": "ACTIVE"
+    }
+  ],
+  "relations": {
+    "resident-001": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-002": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-003": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-004": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-005": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-006": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-007": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-009": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-010": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-011": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-012": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-013": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-014": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-015": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-016": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-017": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-018": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-019": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    },
+    "resident-020": {
+      "familiarity": 20,
+      "trust": 45,
+      "affection": 40,
+      "respect": 40,
+      "interest": 0
+    }
+  },
+  "modelPolicy": "RULES_ONLY",
+  "knowledge": [],
+  "memories": []
+}

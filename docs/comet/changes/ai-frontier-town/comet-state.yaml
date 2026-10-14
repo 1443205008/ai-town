@@ -1,0 +1,429 @@
+schema: comet.native.v4
+name: ai-frontier-town
+language: zh-CN
+phase: verify
+status: active
+state_version: 19
+brief: brief.md
+document_constraints_version: 2
+shape_confirmation_hash: 459d95db5a17270abe5a2bca46cd4d8ea66e183fcbc3c6459945c2c2028a0a59
+spec_changes:
+  - capability: frontier-town
+    operation: create
+    source: specs/frontier-town/spec.md
+workspace:
+  isolation: current
+  change_branch: null
+  target_branch: null
+  finish: null
+loop:
+  stage: verify-ready
+  goal_cycle: 1
+  iteration: 6
+  attempt: 1
+  retry_epoch: 0
+  failed_iteration_count: 5
+  no_progress_count: 1
+  execution_failure_count: 0
+  previous_unresolved_ids:
+    - A10
+    - A11
+  next_action: await-verifier-result
+acceptance:
+  - id: A1
+    source: brief.md
+    text: M0：pnpm/TypeScript monorepo 可按 README 启动；Vue 3 + Phaser 3
+      显示数据驱动的晨沙镇沙漠地图，支持拖动、缩放、点选建筑与角色；Fastify + PostgreSQL + Drizzle 迁移、最小
+      HTTP/WS 鉴权、世界创建/加载、暂停/恢复/1×2×4×与快照可用；两个 Worker 竞争时无重复 Tick，重启恢复地图与游戏时间。
+    result: pending
+    reason: null
+  - id: A2
+    source: brief.md
+    text: M1：20 位原文命名居民的独立 JSON 档案具备 100–300 字背景、五维人格、技能、价值观、需求、资产、目标、住所与有向关系；无 LLM
+      连续模拟至少 3 天，作息、饮食、工作、昼夜与动态寻路可观察，无穿墙、瞬移、双重占用或长期死锁。
+    result: pending
+    reason: null
+  - id: A3
+    source: brief.md
+    text: M2 模型中心：可配置远程/本地 OpenAI-compatible
+      供应商和协议适配接口，按用途及居民覆盖模型策略、安全保存/更换/停用密钥、测试连接、用量/费用/错误/延迟、预算与备用模型；真实兼容测试服务能切换；401/429/超时/断网/预算耗尽均回退，不阻塞
+      Tick。
+    result: pending
+    reason: null
+  - id: A4
+    source: brief.md
+    text: M2
+      居民自治：至少两对居民主动邀请、接受/拒绝、逐句对话、结束并恢复日程；最大回合/时间/令牌限制与会话互斥有效；结构化人格、个人状态、独立记忆检索和目标构建上下文；新目标仅映射合法有限动作，未知行动保留为愿望。
+    result: pending
+    reason: null
+  - id: A5
+    source: brief.md
+    text: M2 记忆与知识：个人记忆按来源、隐私、可信度、转述深度、重要性保存并检索，关系有向更新；A→B 私密对话不进入 C 上下文/镇长视图，B
+      三天后可回忆修井帮助，未履行的公开承诺影响医生支持；传闻不变成事实，重启保持来源与可见性。
+    result: pending
+    reason: null
+  - id: A6
+    source: brief.md
+    text: M3：水/粮/木/石/工具/住房/耐久/工时按配置结算，水塔只增加容量、农田实际耗水；公私账户分离、原子平衡流水、预留与可用余额、薪资/基础消费/贸易/自愿任务可核算；10
+      天生产消费账实一致，失败和重试无负库存、重复扣款或重复承诺，财政库存看板提示缺水。
+    result: pending
+    reason: null
+  - id: A7
+    source: brief.md
+    text: M4：任意自然语言先解析为可编辑草案；建设/限水等合法动作按可配置章程审查、征询、公议/投票、修订/否决/延期、批准、筹资/招工/执行，并审计
+      actor/cause/game_time/revision；不同居民基于利益/知识/记忆提出不同理由，至少一项因钱或民意修订/搁置；未支持意图只讨论，紧急授权有期限与追认。
+    result: pending
+    reason: null
+  - id: A8
+    source: brief.md
+    text: M5 地图规划：独立
+      terrain/elevation/resource_nodes/roads/zoning/structures/blueprints/navigation/fog_of_war
+      层持久化；建筑旋转/占地预览、框选分区、画道路、查询地形/水源、冲突检查、提交/撤回可操作；后端拒绝无用地权、禁建/危险/占地冲突、断路、居民未撤离、未解锁、无工人/材料/预算/授权。
+    result: pending
+    reason: null
+  - id: A9
+    source: brief.md
+    text: M5
+      施工：水塔、住宅、农田及一种道路完成提案→选址→居民讨论→批准→资源预留→自愿接工→按时消耗材料/工资→竣工，地图/容量/住房/产粮发生真实变化；未竣工蓝图不产出；暂停/恢复/取消与灾害/断供/拒工失败路径可演示，未耗预留退回、已耗成本保留，结果进入事件与亲历/听闻记忆。
+    result: pending
+    reason: null
+  - id: A10
+    source: brief.md
+    text: M6：热浪/沙暴/井故障/道路阻塞影响耗水、效率、耐久与通行，居民避难/救灾、自发政策工程待办可观察；真实事件生成日报、可追溯谣言、支持度与基本派系；首周挑战可恢复，不编造交易/死亡/工程结局。
+    result: pending
+    reason: null
+  - id: A11
+    source: brief.md
+    text: M7：可配置主机/版本/鉴权的 JevDecisionAdapter 以独立 choice/score/noul 结构化决策协议运行，并可用
+      Mock 核验及故障 fallback；提供规则/LLM/Jev
+      费用、延迟、态度稳定性与人物一致性对比，公共委员会可审议；正式选举/章程调整保留原文的玩法成熟条件，不伪称已接入未知服务商。
+    result: pending
+    reason: null
+  - id: A12
+    source: brief.md
+    text: M8：探索/测绘/水源勘察后可扩展可加载区块；新移民受粮水/住房/岗位条件约束，居民可创业/搬迁，商队路线、资源转运和定居点协商/贸易可验证；远区采用低频模拟，本地聚落不默认为敌对资源。
+    result: pending
+    reason: null
+  - id: A13
+    source: brief.md
+    text: M9：提供数据驱动的扩展职业生产链、公共服务、长期技术/文化进展，以及有关系/事件依据的家庭、联盟、社群和议会/多镇互动；玩家化身拜访与记忆、事件故事回放、至少两种可选择开荒剧本和世界隔离存档可操作；不得扩张为
+      MMO 或复杂资本市场。
+    result: pending
+    reason: null
+  - id: A14
+    source: brief.md
+    text: 权限与可靠性：所有写命令校验类型/目标/权限/位置/规则/资金/资源/版本，并用唯一幂等键与事务提交；单世界权威锁、AI
+      异步队列/限流/退避/熔断、快照/事件一致恢复与冻结停服时间；HTTP/WS 鉴权、密钥脱敏/不导出、自定义 URL
+      SSRF/重定向防护及受控本地白名单、调试沙盒与正式存档和私密视图隔离通过测试。
+    result: pending
+    reason: null
+  - id: A15
+    source: brief.md
+    text: 界面与美术：桌面可拖动缩放像素沙海地图、昼夜/沙尘/水/灯火/施工/气泡；移动端可阅读管理；提案、居民、对话、规划、财政库存、项目、公告事件、模型中心、设置页面对应真实服务端数据并显示失败原因；素材尺寸/动画帧/许可记录，无未经授权素材再分发。
+    result: pending
+    reason: null
+  - id: A16
+    source: brief.md
+    text: 交付与可观测性：逐阶段通过后再进入下一阶段，M0–M9
+      均提供实际范围/文件/运行测试/证据/缺陷/后续计划报告；README、Compose、环境示例、迁移、Seed、架构/规则/数据模型/素材/里程碑/决策文档、模型
+      Mock、备份导出恢复可复现；固定 seed+Mock 流水一致、Worker 强杀恢复与两 Worker 竞争测试通过，20
+      人及50人压力结果实测，指标覆盖 Tick/积压/AI/账本/WS。
+    result: pending
+    reason: null
+  - id: A17
+    source: brief.md
+    text: 最终体验：人工或浏览器演示 A 活着的小镇、B 秘密和社会记忆、C 限水冲突、D 钱不够的水塔、E 真正建造、F 断开模型六个场景并记录证据；最终
+      20 位不同移民持续生活，水塔成功或有实际原因搁置，居民记住经历，提案全链路可按编号追溯。
+    result: pending
+    reason: null
+builder_handoff:
+  candidate_id: ccc781f2-fb75-4673-b240-faba3bd4e64f
+  identity_provider: skill-coordinated
+  builder_execution_ref: skill-coordinated:builder:69f33a96-b3a7-4e1a-9c5c-fba3a99c6c0c
+  iteration: 6
+  summary:
+    text: 补齐 A10 真实道路阻塞/居民清障、耐久损耗与生产施工效率；A11 Jev 三次采样、报告费用/Token 计量、稳定性和角色一致性对照。
+    truncated: false
+  addressed_acceptance_ids:
+    - A1
+    - A2
+    - A3
+    - A4
+    - A5
+    - A6
+    - A7
+    - A8
+    - A9
+    - A10
+    - A11
+    - A12
+    - A13
+    - A14
+    - A15
+    - A16
+    - A17
+  acceptance_review:
+    - id: A1
+      status: implemented-with-evidence
+      evidence:
+        - tests/m0.test.ts
+        - tests/browser/m0.spec.ts
+        - tests/browser/a17.spec.ts
+        - docs/reports/M0-IMPLEMENTATION-REPORT.md
+      note: 登录鉴权、地图快照、并发 Tick、长批事件持久化回归及浏览器场景。
+    - id: A2
+      status: implemented-with-evidence
+      evidence:
+        - seed/residents/*.json
+        - tests/m1.test.ts
+        - tests/m1-persistence.test.ts
+      note: 20位居民档案、规则模拟及持久化。
+    - id: A3
+      status: implemented-with-evidence
+      evidence:
+        - packages/model-center
+        - tests/m2-provider.test.ts
+        - docs/reports/M2-IMPLEMENTATION-REPORT.md
+      note: 兼容 HTTP Provider、超时/鉴权/限额故障回退及密钥加密；验证使用本地 Mock。
+    - id: A4
+      status: implemented-with-evidence
+      evidence:
+        - packages/agent-runtime/src/social.ts
+        - tests/m2.test.ts
+      note: 自主社交、回合限制和会话互斥。
+    - id: A5
+      status: implemented-with-evidence
+      evidence:
+        - packages/agent-runtime/src/memory.ts
+        - tests/m2.test.ts
+        - tests/browser/a17.spec.ts
+      note: 居民私有记忆隔离、来源记录、关系更新及浏览器公开视图隐私验证。
+    - id: A6
+      status: implemented-with-evidence
+      evidence:
+        - packages/economy/src/economy.ts
+        - tests/m3.test.ts
+      note: 十日规则账本、库存、交易幂等及核算。
+    - id: A7
+      status: implemented-with-evidence
+      evidence:
+        - packages/governance/src/governance.ts
+        - tests/m4.test.ts
+        - tests/m5-api.test.ts
+        - tests/browser/a17.spec.ts
+      note: 提案讨论、意见、修订、资金搁置、API 幂等及浏览器限水决议。
+    - id: A8
+      status: implemented-with-evidence
+      evidence:
+        - packages/city-planning/src/construction.ts
+        - tests/m5.test.ts
+      note: 规划图层、占地/危险/居民/授权校验。
+    - id: A9
+      status: implemented-with-evidence
+      evidence:
+        - packages/city-planning/src/construction.ts
+        - tests/m5.test.ts
+        - tests/m5-api.test.ts
+        - tests/browser/a17.spec.ts
+      note: 水塔资金校验、劳务和成本核算、施工完成、取消/暂停及连续浏览器断言。
+    - id: A10
+      status: implemented-with-evidence
+      evidence:
+        - packages/world-core/src/environment.ts
+        - packages/economy/src/economy.ts
+        - packages/city-planning/src/construction.ts
+        - tests/m6.test.ts
+        - docs/reports/M6-IMPLEMENTATION-REPORT.md
+      note: 天气改变耗水、生产施工效率和建筑耐久；沙暴阻塞通行、居民清障并恢复 navigation，事件与亲历记忆可追溯；测试覆盖寻路和生产对照。
+    - id: A11
+      status: implemented-with-evidence
+      evidence:
+        - packages/model-center/src/decision.ts
+        - apps/server/src/app.ts
+        - apps/web/src/WorldPanel.vue
+        - tests/m7.test.ts
+        - docs/reports/M7-IMPLEMENTATION-REPORT.md
+      note: 规则/LLM/Jev 多样本对照：各供应商最多三次采样，统计费用、延迟、态度稳定性、角色立场一致性；Jev 报告 cost 或 Token
+        和配置单价，缺少用量显示未知；Mock 验证三次调用和真实报告 Token 计量。
+    - id: A12
+      status: implemented-with-evidence
+      evidence:
+        - packages/world-core/src/expansion.ts
+        - tests/m8-m9.test.ts
+      note: 勘察扩容、移民承载、创业搬迁和外交贸易。
+    - id: A13
+      status: implemented-with-evidence
+      evidence:
+        - packages/world-core/src/civilization.ts
+        - tests/m8-m9.test.ts
+      note: 生产研究、访客、事件回放、多剧本和隔离世界。
+    - id: A14
+      status: implemented-with-evidence
+      evidence:
+        - packages/agent-runtime/src/jobs.ts
+        - apps/server/src/worker.ts
+        - apps/server/src/app.ts
+        - tests/m2-provider.test.ts
+        - tests/reliability.test.ts
+      note: 带延迟退避重试、熔断和幂等键的 Provider Job；调试沙盒仅环境变量开启、隔离且不落库/导出；恢复校验、指标和 20/50 居民各 1000
+        Tick 实测。
+    - id: A15
+      status: implemented-with-evidence
+      evidence:
+        - apps/web/src/TownMap.vue
+        - apps/web/src/style.css
+        - apps/web/src/WorldPanel.vue
+        - docs/ASSET-LICENSES.md
+        - tests/browser/m0.spec.ts
+        - docs/reports/mobile-finance.png
+      note: 昼夜、天气、灯火、施工与社交呈现，桌面/移动端地图面板浏览器验证及原创素材许可清单。
+    - id: A16
+      status: implemented-with-evidence
+      evidence:
+        - docs/reports/M0-IMPLEMENTATION-REPORT.md
+        - docs/reports/M1-IMPLEMENTATION-REPORT.md
+        - docs/reports/M2-IMPLEMENTATION-REPORT.md
+        - docs/reports/M3-IMPLEMENTATION-REPORT.md
+        - docs/reports/M4-IMPLEMENTATION-REPORT.md
+        - docs/reports/M5-IMPLEMENTATION-REPORT.md
+        - docs/reports/M6-IMPLEMENTATION-REPORT.md
+        - docs/reports/M7-IMPLEMENTATION-REPORT.md
+        - docs/reports/M8-IMPLEMENTATION-REPORT.md
+        - docs/reports/M9-IMPLEMENTATION-REPORT.md
+        - tests/reliability.test.ts
+      note: 阶段报告、20/50 人负载、8 路竞争 Tick、重启脚本、导入恢复和运行指标均有实测证据。
+    - id: A17
+      status: implemented-with-evidence
+      evidence:
+        - tests/browser/a17.spec.ts
+        - docs/reports/FINAL-ACCEPTANCE-EVIDENCE.md
+        - docs/reports/A17-A-live-town.png
+        - docs/reports/A17-B-private-view.png
+        - docs/reports/A17-C-rationing.png
+        - docs/reports/A17-D-water-tower-unfunded.png
+        - docs/reports/A17-E-water-tower-built.png
+        - docs/reports/A17-F-model-offline.png
+      note: 同一浏览器会话连续完成 A-F：居民城镇、私有记忆、限水意见、无预算拒建、供资竣工与事件追溯、关闭模型后规则模拟持续推进；Playwright
+        通过。
+  checks:
+    - name:
+        text: pnpm typecheck
+        truncated: false
+      result: passed
+      note:
+        text: vue-tsc --noEmit
+        truncated: false
+    - name:
+        text: pnpm test
+        truncated: false
+      result: passed
+      note:
+        text: 13 个文件 27 项测试通过；新增 M6 导航/生产对照单独复核。
+        truncated: false
+    - name:
+        text: pnpm build
+        truncated: false
+      result: passed
+      note:
+        text: 生产构建成功；Phaser 主包约 1.59 MB，Vite 提示可进一步分包
+        truncated: false
+    - name:
+        text: tests/browser/a17.spec.ts
+        truncated: false
+      result: passed
+      note:
+        text: 单会话 A-F 集成旅程通过，生成六张截图
+        truncated: false
+  checks_truncated: false
+  known_limits:
+    - text: 未配置或调用付费外部 LLM/Jev 服务；协议、回退及指标用本地 HTTP Mock 验证。
+      truncated: false
+    - text: Vite 生产构建提示 Phaser 主包超过 500 KB，当前仍可正常构建。
+      truncated: false
+  known_limits_truncated: false
+  review: null
+  submitted_at: 2026-10-13T09:04:07.155Z
+blockers: []
+verification: null
+history:
+  - goal_cycle: 1
+    iteration: 1
+    attempt: 0
+    outcome: recovery
+    unresolved_ids: []
+    summary:
+      text: "Builder handoff Runtime checks failed: check-3, check-4"
+      truncated: false
+    completed_at: 2026-10-13T06:12:03.113Z
+  - goal_cycle: 1
+    iteration: 2
+    attempt: 0
+    outcome: recovery
+    unresolved_ids: []
+    summary:
+      text: "Builder handoff Runtime checks failed: check-3, check-4"
+      truncated: false
+    completed_at: 2026-10-13T06:20:10.099Z
+  - goal_cycle: 1
+    iteration: 3
+    attempt: 1
+    outcome: fail
+    unresolved_ids:
+      - A11
+      - A14
+      - A15
+      - A16
+      - A17
+    summary:
+      text: 核心 M0–M9 模块及现有自动化套件均可运行（pnpm test 22/22、typecheck、build、browser 1/1 通过），但
+        A11、A14–A17 有具体实现或证据缺口，因此整体验收失败。
+      truncated: false
+    completed_at: 2026-10-13T06:38:40.068Z
+  - goal_cycle: 1
+    iteration: 4
+    attempt: 1
+    outcome: fail
+    unresolved_ids:
+      - A11
+      - A14
+      - A17
+    summary:
+      text: 核心 M0–M9 范围和新增运行/恢复/负载证据已复核；pnpm test 24/24、typecheck、build、桌面及移动端浏览器 2/2
+        通过。A11、A14、A17 仍有明确缺口，整体验收失败。
+      truncated: false
+    completed_at: 2026-10-13T07:26:38.344Z
+  - goal_cycle: 1
+    iteration: 5
+    attempt: 1
+    outcome: fail
+    unresolved_ids:
+      - A10
+      - A11
+    summary:
+      text: 本轮 pnpm test 26/26、typecheck、build 和连续浏览器 A-F 测试均通过。A14 与 A17
+        的前轮缺口已有实现和验证；A10 环境模拟与 A11 三路决策对比仍不满足完整验收，因此整体失败。
+      truncated: false
+    completed_at: 2026-10-13T08:32:28.557Z
+  - goal_cycle: 1
+    iteration: 5
+    attempt: 1
+    outcome: recovery
+    unresolved_ids: []
+    summary:
+      text: 用户决定继续修复 A10/A11；改为实现并测试真实道路阻塞与环境耐久效率效果，以及 Jev 重复采样和可配置成本计量。
+      truncated: false
+    completed_at: 2026-10-13T08:52:50.321Z
+history_overflow:
+  dropped_entries: 0
+  first_dropped_at: null
+  last_dropped_at: null
+  outcome_counts:
+    pass: 0
+    fail: 0
+    blocked: 0
+    execution-error: 0
+    recovery: 0
+verification_result: pending
+verification_report: null
+archived: false
+created_at: 2026-10-13T02:25:43.646Z

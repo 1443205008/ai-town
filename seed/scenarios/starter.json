@@ -1,0 +1,316 @@
+{
+  "name": "晨沙镇",
+  "seed": 731,
+  "map": "starter",
+  "resources": {
+    "cash": 5000,
+    "water": 120,
+    "food": 110,
+    "stone": 120,
+    "wood": 80,
+    "tools": 12
+  },
+  "rules": {
+    "gameMinutesPerTick": 0.8,
+    "waterDaily": 22,
+    "waterConsumption": 28,
+    "foodDaily": 14,
+    "foodConsumption": 20,
+    "waterCapacity": 200,
+    "housingCapacity": 20
+  },
+  "residents": [
+    {
+      "id": "resident-001",
+      "name": "艾拉",
+      "role": "水务工程师",
+      "x": 24,
+      "y": 25,
+      "color": 3958878,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-002",
+      "name": "莱恩",
+      "role": "财政官",
+      "x": 25,
+      "y": 25,
+      "color": 9590853,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-003",
+      "name": "萨娜",
+      "role": "医生",
+      "x": 26,
+      "y": 25,
+      "color": 5863816,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-004",
+      "name": "马库斯",
+      "role": "商队联络商人",
+      "x": 27,
+      "y": 25,
+      "color": 10386240,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-005",
+      "name": "尤里",
+      "role": "建筑工头",
+      "x": 28,
+      "y": 25,
+      "color": 3958878,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-006",
+      "name": "米拉",
+      "role": "农艺师",
+      "x": 29,
+      "y": 25,
+      "color": 9590853,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-007",
+      "name": "伊凡",
+      "role": "仓库管理员",
+      "x": 30,
+      "y": 25,
+      "color": 5863816,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-008",
+      "name": "莫娜",
+      "role": "镇务文书",
+      "x": 31,
+      "y": 25,
+      "color": 10386240,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-009",
+      "name": "阿吉尔",
+      "role": "沙漠向导",
+      "x": 32,
+      "y": 25,
+      "color": 3958878,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-010",
+      "name": "罗莎",
+      "role": "工匠",
+      "x": 33,
+      "y": 25,
+      "color": 9590853,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-011",
+      "name": "哈桑",
+      "role": "炊事负责人",
+      "x": 24,
+      "y": 26,
+      "color": 5863816,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-012",
+      "name": "莉亚",
+      "role": "旅舍经营者",
+      "x": 25,
+      "y": 26,
+      "color": 10386240,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-013",
+      "name": "卡尔",
+      "role": "巡逻队长",
+      "x": 26,
+      "y": 26,
+      "color": 3958878,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-014",
+      "name": "伊莎",
+      "role": "教师",
+      "x": 27,
+      "y": 26,
+      "color": 9590853,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-015",
+      "name": "诺尔",
+      "role": "测绘师",
+      "x": 28,
+      "y": 26,
+      "color": 5863816,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-016",
+      "name": "贝拉",
+      "role": "救护学徒",
+      "x": 29,
+      "y": 26,
+      "color": 10386240,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-017",
+      "name": "西奥",
+      "role": "普通拓荒工",
+      "x": 30,
+      "y": 26,
+      "color": 3958878,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-018",
+      "name": "琳达",
+      "role": "商贩",
+      "x": 31,
+      "y": 26,
+      "color": 9590853,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-019",
+      "name": "欧文",
+      "role": "遗迹研究者",
+      "x": 32,
+      "y": 26,
+      "color": 5863816,
+      "current_action": "IDLE"
+    },
+    {
+      "id": "resident-020",
+      "name": "露娜",
+      "role": "外来移民代表",
+      "x": 33,
+      "y": 26,
+      "color": 10386240,
+      "current_action": "IDLE"
+    }
+  ],
+  "charter": {
+    "permissions": [
+      "CONSTRUCTION",
+      "RATIONING",
+      "TAX",
+      "MIGRATION",
+      "OPEN_DISCUSSION"
+    ],
+    "votingKinds": [
+      "TAX",
+      "MIGRATION"
+    ],
+    "emergencyDays": 1
+  },
+  "tradeOffers": [
+    {
+      "resource": "water",
+      "price": 2,
+      "stock": 200
+    },
+    {
+      "resource": "food",
+      "price": 3,
+      "stock": 200
+    },
+    {
+      "resource": "wood",
+      "price": 5,
+      "stock": 200
+    },
+    {
+      "resource": "stone",
+      "price": 4,
+      "stock": 200
+    },
+    {
+      "resource": "tools",
+      "price": 25,
+      "stock": 200
+    }
+  ],
+  "buildings": {
+    "WATER_TOWER": {
+      "name": "蓄水塔",
+      "width": 2,
+      "height": 2,
+      "cash": 3400,
+      "resources": {
+        "stone": 60,
+        "wood": 30
+      },
+      "minutes": 480,
+      "skill": 60,
+      "wage": 16,
+      "waterCapacity": 200
+    },
+    "HOUSING": {
+      "name": "泥砖住宅",
+      "width": 3,
+      "height": 2,
+      "cash": 1000,
+      "resources": {
+        "stone": 30,
+        "wood": 20
+      },
+      "minutes": 240,
+      "skill": 50,
+      "wage": 16,
+      "housingCapacity": 8
+    },
+    "FARM": {
+      "name": "绿洲农田",
+      "width": 3,
+      "height": 2,
+      "cash": 700,
+      "resources": {
+        "stone": 10,
+        "wood": 20
+      },
+      "minutes": 180,
+      "skill": 40,
+      "wage": 16,
+      "foodDaily": 8,
+      "waterConsumption": 4
+    },
+    "ROAD": {
+      "name": "夯土道路",
+      "width": 1,
+      "height": 1,
+      "cash": 30,
+      "resources": {
+        "stone": 2
+      },
+      "minutes": 30,
+      "skill": 20,
+      "wage": 16
+    }
+  },
+  "productionChains": [
+    {
+      "id": "TOOL_REPAIR",
+      "skill": "建设",
+      "level": 60,
+      "inputs": {
+        "wood": 2,
+        "stone": 1
+      },
+      "outputs": {
+        "tools": 1
+      }
+    }
+  ]
+}

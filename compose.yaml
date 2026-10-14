@@ -1,0 +1,33 @@
+name: frontier-v2
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment: {POSTGRES_USER: frontier, POSTGRES_PASSWORD: frontier_dev, POSTGRES_DB: frontier_v2}
+    ports: ["127.0.0.1:54329:5432"]
+    volumes: ["frontier-v2-db:/var/lib/postgresql/data"]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U frontier -d frontier_v2"], interval: 2s, timeout: 5s, retries: 20}
+  server:
+    build: .
+    command: pnpm start
+    environment: &app-env
+      DATABASE_URL: postgres://frontier:frontier_dev@postgres:5432/frontier_v2
+      MAYOR_PASSWORD: ${MAYOR_PASSWORD:?Set MAYOR_PASSWORD in .env}
+      SESSION_SECRET: ${SESSION_SECRET:?Set SESSION_SECRET in .env}
+      APP_ORIGIN: ${APP_ORIGIN:-http://localhost:5188}
+      PORT: 3100
+    depends_on: {postgres: {condition: service_healthy}}
+    ports: ["127.0.0.1:3100:3100"]
+    restart: unless-stopped
+  worker:
+    build: .
+    command: pnpm worker
+    environment: *app-env
+    depends_on: {postgres: {condition: service_healthy}}
+    restart: unless-stopped
+  web:
+    build: {context: ., dockerfile: apps/web/Dockerfile}
+    ports: ["127.0.0.1:5188:80"]
+    depends_on: [server]
+    restart: unless-stopped
+volumes:
+  frontier-v2-db:

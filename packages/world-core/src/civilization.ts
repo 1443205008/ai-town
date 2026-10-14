@@ -1,0 +1,14 @@
+import type {World} from '../../shared/src/types';
+import {event} from './world';
+import {inventory,transfer} from '../../economy/src/economy';
+import {remember} from '../../agent-runtime/src/memory';
+export function civilizationTick(w:World,dt:number){
+ w.civilization??={research:0,culture:0,technologies:[],communities:[],families:[{members:['resident-003','resident-016'],relation:'师徒互助'}],services:[],diplomacy:[{id:'oasis-west',name:'西风绿洲',trust:45,tradeRoute:'灰风隘口',stock:{food:200,water:100}}]};
+ const c=w.civilization;c.research+=w.residents.filter(r=>/研究|测绘/.test(r.role)&&r.current_action==='WORKING').length*dt/60;c.culture+=w.conversations.filter(c=>c.status==='ACTIVE').length*dt/60;
+ if(c.research>=20&&!c.technologies.includes('WATER_FILTER')){c.technologies.push('WATER_FILTER');event(w,'research.completed',{technology:'WATER_FILTER'});}
+ if(c.culture>=10&&!c.communities.some((s:any)=>s.id==='water-group')){c.communities.push({id:'water-group',name:'节水互助社',members:w.residents.filter(r=>/水务|农|医/.test(r.role)).map(r=>r.id)});event(w,'community.formed',{id:'water-group'});}
+ if(w.gameTime<(w.nextProductionAt??0))return;w.nextProductionAt=w.gameTime+1440;
+ for(const recipe of w.scenario.productionChains??[]){const worker=w.residents.find(r=>r.skills[recipe.skill]>=recipe.level&&!r.projectId&&r.needs.energy>40);if(!worker||Object.entries(recipe.inputs).some(([k,v])=>w.resources[k]<(v as number)))continue;const key=`production:${recipe.id}:${Math.floor(w.gameTime/1440)}`;for(const [k,v] of Object.entries(recipe.inputs))inventory(w,`${key}:in:${k}`,k,-(v as number),`生产${recipe.id}`);for(const [k,v] of Object.entries(recipe.outputs))inventory(w,`${key}:out:${k}`,k,v as number,`生产${recipe.id}`);event(w,'production.completed',{recipe:recipe.id,worker:worker.id});}
+}
+export function visit(w:World,key:string,residentId:string,text:string){const r=w.residents.find(r=>r.id===residentId);if(!r||r.current_action==='SLEEPING'||r.projectId)throw new Error('居民当前不便会面');w.visitor??={id:'PLAYER_VISITOR',x:30,y:24};w.visitor.destination={x:r.x,y:r.y};const e=event(w,'visitor.spoke',{residentId,text},'PLAYER_VISITOR','PUBLIC',key);remember(w,residentId,`镇长来访说：${text}`,e.id,'PRIVATE','EXPERIENCED',['MAYOR']);return {reply:`${r.name}：我正在关注${r.goals.at(-1)?.content}，谢谢你亲自来听我的想法。`};}
+export function diplomacy(w:World,key:string,settlementId:string,action:string){const s=w.civilization?.diplomacy.find((s:any)=>s.id===settlementId);if(!s)throw new Error('未知聚落');if(action==='NEGOTIATE'){s.trust=Math.min(100,s.trust+5);event(w,'diplomacy.negotiated',{settlementId,trust:s.trust});}else if(action==='TRADE'){if(s.trust<40||s.stock.food<10)throw new Error('协商/供货条件不足');transfer(w,key,'PUBLIC','EXTERNAL',30,'邻镇补给贸易');inventory(w,`${key}:goods`,'food',10,'商路运送');s.stock.food-=10;w.routes??=[];w.routes.push({id:key,from:settlementId,to:w.id,status:'DELIVERED',resource:'food',amount:10});}else throw new Error('未知外交动作');}
