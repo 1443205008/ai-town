@@ -1,6 +1,7 @@
 import type {World} from '../../shared/src/types';
 export function remember(w:World,ownerId:string,content:string,sourceId:string,privacy='PRIVATE',sourceType='EXPERIENCED',subjectIds:string[]=[],confidence=1){
  const r=w.residents.find(r=>r.id===ownerId);if(!r)throw new Error('居民不存在');
+ r.memories??=[];
  const id=`${ownerId}:${sourceId}:${content}`;if(r.memories.some((m:any)=>m.id===id))return;
  r.memories.push({id,owner_id:ownerId,type:'EPISODIC',content,source_type:sourceType,source_id:sourceId,subject_ids:subjectIds,location_id:`${r.x},${r.y}`,game_time:w.gameTime,salience:70,confidence,privacy,hearsay_depth:sourceType==='HEARSAY'?1:0,created_at:w.gameTime,updated_at:w.gameTime});
 }

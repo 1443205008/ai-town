@@ -4,13 +4,15 @@ import {submitProposal,parseProposal} from '../../governance/src/governance';
 import {remember} from '../../agent-runtime/src/memory';
 export function environmentTick(w:World,dt:number){
  w.roadObstructions??=[];
+ for(const r of w.residents){r.needs??={energy:90,thirst:25,hunger:25,stress:10,sleep:0,social:50};for(const [key,value] of Object.entries({energy:90,thirst:25,hunger:25,stress:10,sleep:0,social:50}))r.needs[key]??=value;r.memories??=[];r.relations??={};r.knowledge??=[];}
  const day=Math.floor(w.gameTime/1440);if(w.environmentDay!==day){
   w.environmentDay=day;const kinds=['CLEAR','CLEAR','HEATWAVE','CLEAR','SANDSTORM','CLEAR','WELL_FAULT'];const type=kinds[(day+w.seed)%kinds.length];
   w.weather={type,day,temperature:type==='HEATWAVE'?45:32,warning:type==='SANDSTORM'?'沙暴来临，请暂停危险劳动':''};
   const well=w.map.structures.find(b=>b.type==='WELL');if(well)well.operational=type!=='WELL_FAULT';event(w,'weather.changed',w.weather);
   w.reports??=[];const actual=w.events.filter(e=>e.visibility==='PUBLIC'&&e.game_time>=(day-1)*1440&&e.game_time<day*1440);w.reports.push({day,headline:actual.some(e=>e.type==='project.progress')?'小镇工程与居民生活进展':'晨沙镇生活记录',eventIds:actual.map(e=>e.id),summary:actual.slice(-8).map(e=>`${e.type} · ${JSON.stringify(e.payload).slice(0,90)}`)});
   w.factions??=[{id:'water',name:'绿洲互助',members:['resident-001','resident-003','resident-006'],support:50},{id:'trade',name:'边境商路',members:['resident-004','resident-018'],support:50}];
-  if(day>=1&&!w.proposals.some(p=>p.initiator==='resident-001'&&p.title.includes('检修'))){submitProposal(w,{...parseProposal('建议检修水井并核实地下水'),kind:'OPEN_DISCUSSION'},`resident-well:${day}`,'resident-001');}
+  const charter=w.charter??w.scenario.charter;
+  if(day>=1&&(charter?.permissions?.includes('OPEN_DISCUSSION')??false)&&!w.proposals.some(p=>p.initiator==='resident-001'&&p.title.includes('检修'))){submitProposal(w,{...parseProposal('建议检修水井并核实地下水'),kind:'OPEN_DISCUSSION'},`resident-well:${day}`,'resident-001');}
   if(w.resources.water<40&&!w.proposals.some(p=>p.kind==='RATIONING'&&!['CANCELLED','REJECTED'].includes(p.status))){submitProposal(w,parseProposal('临时限水，保留医疗用水'),`resident-ration:${day}`,'resident-003');}
   if(type==='SANDSTORM'){
    const routes=w.map.roads.length?w.map.roads:w.map.navigation.flatMap((cost,i)=>cost>0?[{x:i%w.map.width,y:Math.floor(i/w.map.width)}]:[]);
